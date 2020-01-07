@@ -11,3 +11,15 @@ const loaf = {
 console.log(loaf.flour);
 console.log(loaf.water);
 console.log(loaf.hydration());
+
+const obj = {
+  foo: 'a',
+  bar: 'b',
+  fum: 'c',
+  quux: 'd',
+  spam: 'e'
+};
+
+for (const key in obj) {
+  console.log(`${key}: ${obj[key]}`);
+};
