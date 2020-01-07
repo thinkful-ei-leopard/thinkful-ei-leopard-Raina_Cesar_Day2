@@ -29,3 +29,14 @@ const meal = {
 };
 console.log(meal.meals[3]);
 
+
+
+const array = [
+  {Sarah: 'engineer'},
+  {Elise: 'developer'},
+  {Tom: 'boss'}
+];
+
+
+
+array.forEach(obj => console.log(obj));
