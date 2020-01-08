@@ -28,15 +28,3 @@ const meal = {
   meals: ['breakfast', 'second breakfast', 'elevenses','lunch', 'afternoon tea', 'dinner', 'supper']
 };
 console.log(meal.meals[3]);
-
-
-
-const array = [
-  {Sarah: 'engineer'},
-  {Elise: 'developer'},
-  {Tom: 'boss'}
-];
-
-
-
-array.forEach(obj => console.log(obj));
