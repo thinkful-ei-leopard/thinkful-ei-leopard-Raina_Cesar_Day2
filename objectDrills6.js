@@ -1,27 +1,36 @@
 /* eslint-disable strict */
-const toDecode =  'craft block argon meter bells brown croon droop';
-const split = toDecode.split(' ');
-const table = {
+const dictionary = {
   a: 1,
   b: 2,
   c: 3,
   d: 4
 };
 
-// function decode(word) {
-//   let index = word.charAt[0];
-//   if (Object.keys(table).find(letter => letter === index)) {
-//     return word[table[index]];
-//   } else {
-//     return ' ';
-//   }
-// }
+function decode(word) {
+  const letter = word[0];
+  const listKeys = Object.keys(dictionary);
+  let result = '';
 
-function decodeWords(words) {
-  const arr = [];
-  split.forEach(d => arr.push(decode(d)));
-  return split.join('');
+  listKeys.forEach(key => {
+    if (letter !== key) {
+      return ' ';
+    }
+    if (letter ===  key) {
+      result = word[dictionary[key]]; 
+    }
+  });
+  return result;
 }
 
-console.log(decode(table));
+const input = 'craft block argon meter bells brown croon droop';
+const stringInArray = input.split(' ');
+
+function decodedString() {
+  return stringInArray.map(word => {
+    return decode(word);
+  }).join('');
+}
+
+console.log(decodedString());
+
 
